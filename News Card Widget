@@ -1,0 +1,64 @@
+import 'package:flutter/material.dart';
+
+class NewsCard extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 4,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      margin: EdgeInsets.all(16),
+      child: Padding(
+        padding: EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Category/Tag
+            Text(
+              'ROMANCE',
+              style: TextStyle(
+                color: Colors.pink,
+                fontWeight: FontWeight.bold,
+                fontSize: 12,
+                letterSpacing: 1.2,
+              ),
+            ),
+            SizedBox(height: 8),
+            // Title
+            Text(
+              'Mike Majlak Confirms Permanent Breakup with Lana Rhoades',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 12),
+            // Body Text
+            Text(
+              'Mike Majlak revealed that the relationship is officially over due to incompatibility issues. "I have her blocked across the board. We\'re not speaking to each other," Mike stated, though he added that he still loves her and hopes to remain friends in the future.',
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.grey[700],
+                height: 1.4,
+              ),
+            ),
+            SizedBox(height: 16),
+            // Footer / Source
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Source: imPaulsive',
+                  style: TextStyle(fontSize: 12, color: Colors.grey),
+                ),
+                Text(
+                  'Feb 23',
+                  style: TextStyle(fontSize: 12, color: Colors.grey),
+                ),
+              ],
+            ,
+          ],
+        ),
+      ),
+    );
+  }
+}
